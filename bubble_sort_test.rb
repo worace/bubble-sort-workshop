@@ -29,4 +29,13 @@ class BubbleSortTest < Minitest::Test
     swap!(list, 0,1)
     assert_equal [1,2], list
   end
+
+  # 3 2 1
+  # 2 3 1
+  # 2 1 3
+  # 1 2 3
+  def test_sorts_when_multiple_passes_are_required
+    assert_equal [1,2,3], bubble_sort([3,2,1])
+  end
+
 end
