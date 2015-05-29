@@ -20,6 +20,10 @@ class BubbleSortTest < Minitest::Test
     assert_equal [1,2], bubble_sort([2,1])
   end
 
+  def test_it_can_swap_a_later_pair
+    assert_equal [1,2,3], bubble_sort([1,3,2])
+  end
+
   def test_swap_swaps_provided_indices
     list = [2,1]
     swap!(list, 0,1)
