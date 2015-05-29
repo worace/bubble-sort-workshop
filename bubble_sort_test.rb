@@ -1,6 +1,6 @@
 require "minitest"
 require "minitest/autorun"
-
+require_relative "bubble_sort"
 
 class BubbleSortTest < Minitest::Test
   # loop through our numbers,
@@ -13,4 +13,15 @@ class BubbleSortTest < Minitest::Test
   # if we reach the end of the list without
   # encountering any "out of order pairs",
   # then good job us, it's sorted
+  def test_it_sorts_an_empty_list
+    assert_equal [], bubble_sort([])
+  end
+
+  def test_it_sorts_a_single_element
+    assert_equal [1], bubble_sort([1])
+  end
+
+  def test_it_sorts_2_that_are_already_sorted
+    assert_equal [1,2], bubble_sort([1,2])
+  end
 end
