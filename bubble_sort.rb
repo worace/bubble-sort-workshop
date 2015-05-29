@@ -14,14 +14,14 @@ def bubble_sort(list)
   # [1]
   # list[1] -> number or nil
   if list[1] && list[0] > list[1]
-    swap(0, 1)
-    # left = list[0]
-    # right = list[1]
-    # list[0] = right
-    # list[1] = left
+    swap!(list, 0, 1)
   end
   list
 end
 
-def swap!(index_1, index_2)
+def swap!(list, index_1, index_2)
+  left = list[index_1]
+  right = list[index_2]
+  list[index_1] = right
+  list[index_2] = left
 end

@@ -22,7 +22,7 @@ class BubbleSortTest < Minitest::Test
 
   def test_swap_swaps_provided_indices
     list = [2,1]
-    swap!(0,1)
+    swap!(list, 0,1)
     assert_equal [1,2], list
   end
 end
